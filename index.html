@@ -1,0 +1,300 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>توزيع مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f172a;           /* slate-900 */
+    --card:#111827;         /* gray-900 */
+    --text:#e5e7eb;         /* gray-200 */
+    --muted:#9ca3af;        /* gray-400 */
+    --accent:#06b6d4;       /* cyan-500 */
+    --accent-2:#a78bfa;     /* violet-400 */
+    --accent-3:#f472b6;     /* pink-400 */
+    --ring:rgba(255,255,255,.15);
+    --radius:18px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:"Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    background:
+      radial-gradient(1200px 600px at 110% -10%, #1e293b 10%, transparent 60%),
+      radial-gradient(900px 500px at -10% -20%, #0b1220 10%, transparent 60%),
+      var(--bg);
+    color:var(--text);
+    line-height:1.7;
+  }
+
+  .container{
+    max-width:1200px;
+    padding:32px 20px 60px;
+    margin-inline:auto;
+  }
+
+  header{
+    display:grid;
+    gap:20px;
+    align-items:center;
+    justify-items:center;
+    text-align:center;
+    padding:20px;
+    border-radius:var(--radius);
+    background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+    outline:1px solid rgba(255,255,255,.06);
+    box-shadow: 0 0 0 1px var(--ring) inset, 0 25px 60px rgba(0,0,0,.35);
+  }
+
+  header .logo{
+    height:90px;
+    width:auto;
+    display:block;
+    filter: drop-shadow(0 4px 18px rgba(0,0,0,.35));
+  }
+
+  h1{
+    margin:6px 0 0;
+    font-size:clamp(20px, 3.5vw, 28px);
+    font-weight:800;
+    letter-spacing:.2px;
+  }
+
+  .lead{
+    margin:6px 0 2px;
+    font-size:clamp(14px, 2.6vw, 18px);
+    color:var(--muted);
+  }
+
+  .ribbon{
+    display:inline-block;
+    padding:.35rem .75rem;
+    border-radius:999px;
+    font-size:.9rem;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    outline:1px solid rgba(255,255,255,.12);
+    margin-top:6px;
+  }
+
+  section{margin-top:36px}
+  .section-title{
+    display:flex; align-items:center; gap:10px;
+    font-size:1.3rem; font-weight:800;
+    margin:0 0 14px;
+  }
+  .tag{
+    font-size:.9rem;
+    color:var(--muted);
+    padding:.2rem .6rem;
+    border-radius:999px;
+    outline:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap:14px;
+  }
+  @media (max-width:1100px){ .grid{grid-template-columns:repeat(4,1fr)} }
+  @media (max-width:780px){ .grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:430px){ .grid{grid-template-columns:1fr} }
+
+  a.card{
+    position:relative;
+    display:block;
+    border-radius:16px;
+    overflow:hidden;
+    background:var(--card);
+    outline:1px solid rgba(255,255,255,.08);
+    text-decoration:none;
+    color:inherit;
+    box-shadow: 0 0 0 1px var(--ring) inset;
+    transition: transform .18s ease, box-shadow .18s ease, outline-color .18s ease;
+  }
+  a.card:focus-visible{
+    outline:2px solid var(--accent);
+  }
+  a.card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 18px 50px rgba(0,0,0,.35);
+    outline-color: rgba(255,255,255,.16);
+  }
+
+  .tile{
+    height:120px;
+    width:100%;
+    background-size:120px 120px;
+    background-position:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  /* ثلاث أنماط خلفية SVG فيها رموز + − × ÷ (مكرّرة) */
+  /* أخضر/فيروزي */
+  .pattern-a{
+    background-image:url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\
+<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\
+ <rect width='120' height='120' fill='rgb(7, 16, 33)'/>\
+ <g stroke='rgb(0, 213, 255)' stroke-width='6' stroke-opacity='.55' stroke-linecap='round'>\
+  <line x1='20' y1='20' x2='20' y2='48'/>\
+  <line x1='6' y1='34' x2='34' y2='34'/>\
+  <line x1='60' y1='14' x2='92' y2='46'/>\
+  <line x1='92' y1='14' x2='60' y2='46'/>\
+  <line x1='20' y1='74' x2='34' y2='74'/>\
+  <line x1='20' y1='90' x2='34' y2='90'/>\
+  <circle cx='76' cy='76' r='14' fill='none'/>\
+  <line x1='62' y1='76' x2='90' y2='76'/>\
+ </g>\
+</svg>");
+  }
+  /* بنفسجي */
+  .pattern-b{
+    background-image:url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\
+<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\
+ <rect width='120' height='120' fill='rgb(12, 16, 35)'/>\
+ <g stroke='rgb(167, 139, 250)' stroke-width='6' stroke-opacity='.55' stroke-linecap='round'>\
+  <line x1='20' y1='20' x2='20' y2='48'/>\
+  <line x1='6' y1='34' x2='34' y2='34'/>\
+  <line x1='60' y1='14' x2='92' y2='46'/>\
+  <line x1='92' y1='14' x2='60' y2='46'/>\
+  <line x1='20' y1='74' x2='34' y2='74'/>\
+  <line x1='20' y1='90' x2='34' y2='90'/>\
+  <circle cx='76' cy='76' r='14' fill='none'/>\
+  <line x1='62' y1='76' x2='90' y2='76'/>\
+ </g>\
+</svg>");
+  }
+  /* وردي */
+  .pattern-c{
+    background-image:url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\
+<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\
+ <rect width='120' height='120' fill='rgb(17, 12, 28)'/>\
+ <g stroke='rgb(244, 114, 182)' stroke-width='6' stroke-opacity='.55' stroke-linecap='round'>\
+  <line x1='20' y1='20' x2='20' y2='48'/>\
+  <line x1='6' y1='34' x2='34' y2='34'/>\
+  <line x1='60' y1='14' x2='92' y2='46'/>\
+  <line x1='92' y1='14' x2='60' y2='46'/>\
+  <line x1='20' y1='74' x2='34' y2='74'/>\
+  <line x1='20' y1='90' x2='34' y2='90'/>\
+  <circle cx='76' cy='76' r='14' fill='none'/>\
+  <line x1='62' y1='76' x2='90' y2='76'/>\
+ </g>\
+</svg>");
+  }
+
+  .label{
+    padding:14px 14px 16px;
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .label .stage{
+    font-size:.95rem; color:var(--muted);
+  }
+  .label .grade{
+    font-size:1.15rem; font-weight:700;
+  }
+
+  footer{
+    margin-top:36px; text-align:center; color:var(--muted); font-size:.9rem;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header aria-label="ترويسة الصفحة">
+      <img class="logo" src="https://cdn.jsdelivr.net/gh/hashmathtme/1m1/moltaga.svg" alt="شعار ملتقى معلمي ومعلمات الرياضيات">
+      <h1>يسرُّ ملتقى معلمي ومعلمات الرياضيات أن يقدّم لكم</h1>
+      <p class="lead">توزيع مناهج الرياضيات للمرحلة الابتدائية والمتوسطة والثانوية</p>
+      <span class="ribbon">الفصل الدراسي الأول — 1447 هـ</span>
+    </header>
+
+    <!-- الابتدائية -->
+    <section aria-labelledby="el-title">
+      <div class="section-title" id="el-title">
+        <span>المرحلة الابتدائية</span>
+        <span class="tag">6 صفوف</span>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://hashmathtme.github.io/1b1/" target="_blank" rel="noopener" title="توزيع منهج الصف الأول الابتدائي — الفصل الأول 1447هـ">
+          <div class="tile pattern-a" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الابتدائية</span><span class="grade">الصف الأول</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/2b1/" target="_blank" rel="noopener" title="توزيع منهج الصف الثاني الابتدائي — الفصل الأول 1447هـ">
+          <div class="tile pattern-b" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الابتدائية</span><span class="grade">الصف الثاني</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/3b1/" target="_blank" rel="noopener" title="توزيع منهج الصف الثالث الابتدائي — الفصل الأول 1447هـ">
+          <div class="tile pattern-c" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الابتدائية</span><span class="grade">الصف الثالث</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/4b1/" target="_blank" rel="noopener" title="توزيع منهج الصف الرابع الابتدائي — الفصل الأول 1447هـ">
+          <div class="tile pattern-a" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الابتدائية</span><span class="grade">الصف الرابع</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/5b1/" target="_blank" rel="noopener" title="توزيع منهج الصف الخامس الابتدائي — الفصل الأول 1447هـ">
+          <div class="tile pattern-b" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الابتدائية</span><span class="grade">الصف الخامس</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/6b1/" target="_blank" rel="noopener" title="توزيع منهج الصف السادس الابتدائي — الفصل الأول 1447هـ">
+          <div class="tile pattern-c" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الابتدائية</span><span class="grade">الصف السادس</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- المتوسطة -->
+    <section aria-labelledby="mid-title">
+      <div class="section-title" id="mid-title">
+        <span>المرحلة المتوسطة</span>
+        <span class="tag">3 صفوف</span>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://hashmathtme.github.io/1m1/" target="_blank" rel="noopener" title="توزيع منهج الصف الأول المتوسط — الفصل الأول 1447هـ">
+          <div class="tile pattern-a" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">المتوسطة</span><span class="grade">الصف الأول</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/2m1/" target="_blank" rel="noopener" title="توزيع منهج الصف الثاني المتوسط — الفصل الأول 1447هـ">
+          <div class="tile pattern-b" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">المتوسطة</span><span class="grade">الصف الثاني</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/3m1/" target="_blank" rel="noopener" title="توزيع منهج الصف الثالث المتوسط — الفصل الأول 1447هـ">
+          <div class="tile pattern-c" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">المتوسطة</span><span class="grade">الصف الثالث</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- الثانوية -->
+    <section aria-labelledby="hs-title">
+      <div class="section-title" id="hs-title">
+        <span>المرحلة الثانوية</span>
+        <span class="tag">3 صفوف</span>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://hashmathtme.github.io/1t1/" target="_blank" rel="noopener" title="توزيع منهج الصف الأول الثانوي — الفصل الأول 1447هـ">
+          <div class="tile pattern-a" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الثانوية</span><span class="grade">الصف الأول</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/2t1/" target="_blank" rel="noopener" title="توزيع منهج الصف الثاني الثانوي — الفصل الأول 1447هـ">
+          <div class="tile pattern-b" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الثانوية</span><span class="grade">الصف الثاني</span></div>
+        </a>
+        <a class="card" href="https://hashmathtme.github.io/3t1/" target="_blank" rel="noopener" title="توزيع منهج الصف الثالث الثانوي — الفصل الأول 1447هـ">
+          <div class="tile pattern-c" role="img" aria-label="خلفية برموز رياضية"></div>
+          <div class="label"><span class="stage">الثانوية</span><span class="grade">الصف الثالث</span></div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © ملتقى معلمي ومعلمات الرياضيات — 1447 هـ
+    </footer>
+  </div>
+</body>
+</html>
