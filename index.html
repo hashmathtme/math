@@ -4,8 +4,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="توزيع مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات ـ السعودية"
+    />
     <title>توزيع مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="https://hashmathtme.github.io/math/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -57,12 +62,11 @@
       }
 
       header {
-        display: grid;
-        gap: 20px;
+        display: flex;
+        gap: 32px;
         align-items: center;
-        justify-items: center;
         text-align: center;
-        padding: 20px;
+        padding: 24px 32px;
         border-radius: var(--radius);
         background: linear-gradient(
           180deg,
@@ -76,8 +80,13 @@
       header .logo {
         height: 90px;
         width: auto;
+        flex-shrink: 0;
         display: block;
         filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
+      }
+
+      header > div {
+        flex: 1;
       }
 
       h1 {
@@ -102,6 +111,16 @@
         border-radius: 8px;
         color: var(--accent);
         font-weight: 700;
+        animation: pulse 2s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
       }
 
       .ribbon {
@@ -113,6 +132,13 @@
         color: #fff;
         outline: 1px solid rgba(255, 255, 255, 0.12);
         margin-top: 6px;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
       }
 
       section {
@@ -250,15 +276,43 @@
         color: var(--muted);
       }
       .label .grade {
-        font-size: 1.15rem;
+        font-size: 1rem;
         font-weight: 700;
       }
 
       footer {
-        margin-top: 36px;
+        margin-top: 48px;
+        padding: 24px;
         text-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
         color: var(--muted);
         font-size: 0.9rem;
+      }
+      footer a {
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      footer .footer-link {
+        display: block;
+        color: var(--text);
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      footer .footer-link:hover {
+        color: var(--accent);
+      }
+      footer .footer-credits {
+        font-size: 0.8rem;
+        margin: 0;
+        opacity: 0.8;
+      }
+      footer .footer-credits a {
+        color: var(--accent);
+      }
+      footer .footer-credits a:hover {
+        text-decoration: underline;
       }
 
       .stage-prim .card {
@@ -315,18 +369,20 @@
       <header aria-label="ترويسة الصفحة">
         <img
           class="logo"
-          src="https://cdn.jsdelivr.net/gh/hashmathtme/1m1/moltaga.svg"
+          src="https://hashmathtme.github.io/math/logo2.png"
           alt="شعار ملتقى معلمي ومعلمات الرياضيات"
         />
-        <h1>يسرُّ ملتقى معلمي ومعلمات الرياضيات أن يقدّم لكم</h1>
-        <p class="lead">
-          توزيع مناهج الرياضيات للمرحلة الابتدائية والمتوسطة والثانوية <br />
-          <span class="instruction"
-            >إرشادات: قم باختيار صفك ثم بإعدادات الترويسة ببياناتك الخاصة ثم
-            اطبع</span
-          >
-        </p>
-        <span class="ribbon">الفصل الدراسي الثاني — 1447 هـ</span>
+        <div>
+          <h1>يسرُّ ملتقى معلمي ومعلمات الرياضيات أن يقدّم لكم</h1>
+          <p class="lead">
+            توزيع مناهج الرياضيات للمرحلة الابتدائية والمتوسطة والثانوية <br />
+            <span class="instruction"
+              >إرشادات: قم باختيار صفك ثم بإعدادات الترويسة ببياناتك الخاصة ثم
+              اطبع</span
+            >
+          </p>
+          <span class="ribbon">الفصل الدراسي الثاني — 1447 هـ</span>
+        </div>
       </header>
 
       <!-- الابتدائية -->
@@ -341,7 +397,7 @@
             href="https://hashmathtme.github.io/1b1/"
             target="_blank"
             rel="noopener"
-            title="توزيع منهج الصف الثاني الابتدائي — الفصل الثاني 1447هـ"
+            title="توزيع منهج الصف الأول الابتدائي — الفصل الثاني 1447هـ"
           >
             <div
               class="tile pattern-a"
@@ -565,7 +621,45 @@
         </section>
       </div>
 
-      <footer>© ملتقى معلمي ومعلمات الرياضيات — 1447 هـ</footer>
+      <footer>
+        <a
+          href="https://t.me/Interact2030"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-link"
+        >
+          برمجة و تصميم/ ملتقى التعليم التفاعلي بملتقى معلمي ومعلمات الرياضيات ـ
+          المملكة العربية السعودية.
+        </a>
+        <p class="footer-credits">
+          تمت البرمجة باستخدام
+          <a
+            href="https://developers.google.com/studio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Studio
+          </a>
+          و
+          <a
+            href="https://gemini.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Gemini
+          </a>
+          بواسطة
+          <a
+            href="https://t.me/Interact2030"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-weight: 600"
+          >
+            ملتقى التعليم التفاعلي
+          </a>
+          .
+        </p>
+      </footer>
     </div>
     <!-- Google tag (gtag.js) -->
     <script
