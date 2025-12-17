@@ -263,6 +263,23 @@
  </g>\
 </svg>");
       }
+      /* ذهبي - للإحصاء */
+      .pattern-d {
+        background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\
+<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\
+ <rect width='120' height='120' fill='rgb(25, 20, 10)'/>\
+ <g stroke='rgb(250, 204, 21)' stroke-width='5' stroke-opacity='.55' stroke-linecap='round' fill='none'>\
+  <line x1='15' y1='95' x2='15' y2='65'/>\
+  <line x1='30' y1='95' x2='30' y2='45'/>\
+  <line x1='45' y1='95' x2='45' y2='75'/>\
+  <line x1='5' y1='100' x2='55' y2='100'/>\
+  <polyline points='65,50 80,30 95,45 110,25' stroke-linejoin='round'/>\
+  <circle cx='35' cy='25' r='14'/>\
+  <path d='M35 25 L35 11 M35 25 L47 32'/>\
+  <path d='M 70 90 Q 90 50 110 90'/>\
+ </g>\
+</svg>");
+      }
 
       .label {
         padding: 14px 14px 16px;
@@ -325,6 +342,10 @@
       .stage-high .card {
         outline-color: rgba(244, 114, 182, 0.5);
         box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.2) inset;
+      }
+      .stage-stats .card {
+        outline-color: rgba(250, 204, 21, 0.5);
+        box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.2) inset;
       }
 
       .split-wrapper {
@@ -589,7 +610,6 @@
               rel="noopener"
               title="توزيع منهج الصف الثاني الثانوي — الفصل الثاني 1447هـ"
             >
-            
               <div
                 class="tile pattern-c"
                 role="img"
@@ -620,7 +640,8 @@
           </div>
         </section>
       </div>
-       <!--ـ الغربية الثانوية -->
+      <div class="split-wrapper">
+        <!--ـ الغربية الثانوية -->
         <section aria-labelledby="hs-title" class="stage-high">
           <div class="section-title" id="hs-title">
             <span> المنطقة الغربية : المرحلة الثانوية</span>
@@ -651,7 +672,6 @@
               rel="noopener"
               title="توزيع منهج الصف الثاني الثانوي — الفصل الثاني 1447هـ"
             >
-            
               <div
                 class="tile pattern-c"
                 role="img"
@@ -671,6 +691,32 @@
             >
               <div
                 class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الثالث</span>
+              </div>
+            </a>
+          </div>
+        </section>
+        <!--مادة الإحصاء-->
+        <section aria-labelledby="hs-title" class="stage-stats">
+          <div class="section-title" id="hs-title">
+            <span> مادة الأحصاء: المرحلة الثانوية</span>
+            <span class="tag">3 صفوف</span>
+          </div>
+          <div class="grid">
+            <a
+              class="card"
+              href="3t2e.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثالث الثانوي — الفصل الثاني 1447هـ"
+            >
+              <div
+                class="tile pattern-d"
                 role="img"
                 aria-label="خلفية برموز رياضية"
               ></div>
