@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EM20Q3LCDF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EM20Q3LCDF");
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071a2d" />
+    <meta
+      name="description"
+      content="توزيعات مناهج الرياضيات لبقية المناطق والمنطقة الغربية ـ ملتقى معلمي ومعلمات الرياضيات"
+    />
+    <title>توزيعات مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --page: #07111f;
+        --surface: rgba(12, 28, 48, 0.88);
+        --surface-soft: rgba(255, 255, 255, 0.045);
+        --line: rgba(255, 255, 255, 0.1);
+        --text: #f8fafc;
+        --muted: #a8b6c8;
+        --rest: #33d6c4;
+        --west: #f8bd62;
+        --primary: #30c9e8;
+        --middle: #a78bfa;
+        --secondary: #fb7185;
+        --statistics: #facc15;
+        --radius-lg: 26px;
+        --radius-md: 18px;
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family:
+          "Tajawal",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        line-height: 1.7;
+        background:
+          radial-gradient(circle at 85% 0%, rgba(48, 201, 232, 0.15), transparent 30rem),
+          radial-gradient(circle at 5% 30%, rgba(167, 139, 250, 0.12), transparent 28rem),
+          linear-gradient(145deg, #07111f 0%, #091828 55%, #07111f 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page-shell {
+        width: min(1180px, calc(100% - 32px));
+        margin-inline: auto;
+        padding: 28px 0 56px;
+      }
+
+      .hero {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 28px;
+        align-items: center;
+        overflow: hidden;
+        padding: clamp(24px, 4vw, 44px);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(135deg, rgba(18, 43, 68, 0.95), rgba(9, 25, 43, 0.9));
+        box-shadow: var(--shadow);
+      }
+
+      .hero::before,
+      .hero::after {
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        content: "";
+        filter: blur(2px);
+      }
+
+      .hero::before {
+        top: -120px;
+        left: -80px;
+        width: 280px;
+        height: 280px;
+        background: rgba(48, 201, 232, 0.1);
+      }
+
+      .hero::after {
+        right: 40%;
+        bottom: -150px;
+        width: 240px;
+        height: 240px;
+        background: rgba(167, 139, 250, 0.08);
+      }
+
+      .hero-logo {
+        width: clamp(84px, 11vw, 128px);
+        height: auto;
+        filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
+      }
+
+      .eyebrow {
+        margin: 0 0 4px;
+        color: #8fe8f4;
+        font-size: 0.94rem;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.75rem, 4vw, 3rem);
+        line-height: 1.25;
+        letter-spacing: -0.03em;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.12rem);
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .pill {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        min-height: 36px;
+        padding: 6px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: #dce8f4;
+        background: rgba(255, 255, 255, 0.055);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .pill::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--rest);
+        content: "";
+        box-shadow: 0 0 14px var(--rest);
+      }
+
+      .pill.year::before {
+        background: var(--west);
+        box-shadow: 0 0 14px var(--west);
+      }
+
+      .guide {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin: 22px 0 0;
+        padding: 14px 18px;
+        border: 1px solid rgba(51, 214, 196, 0.25);
+        border-radius: 16px;
+        color: #caeff0;
+        background: rgba(51, 214, 196, 0.075);
+      }
+
+      .guide-mark {
+        display: grid;
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+        place-items: center;
+        border-radius: 10px;
+        color: #062621;
+        background: var(--rest);
+        font-size: 1.15rem;
+        font-weight: 800;
+      }
+
+      main {
+        display: grid;
+        gap: 22px;
+        margin-top: 28px;
+      }
+
+      .stage-section {
+        --stage-color: var(--primary);
+        position: relative;
+        overflow: hidden;
+        padding: clamp(20px, 3vw, 30px);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+      }
+
+      .stage-section::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--stage-color);
+        content: "";
+      }
+
+      .stage-section.middle {
+        --stage-color: var(--middle);
+      }
+
+      .stage-section.secondary {
+        --stage-color: var(--secondary);
+      }
+
+      .stage-section.statistics {
+        --stage-color: var(--statistics);
+      }
+
+      .stage-heading {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .stage-symbol {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        flex: 0 0 48px;
+        place-items: center;
+        border: 1px solid color-mix(in srgb, var(--stage-color) 45%, transparent);
+        border-radius: 15px;
+        color: var(--stage-color);
+        background: color-mix(in srgb, var(--stage-color) 10%, transparent);
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .stage-title-group {
+        flex: 1;
+      }
+
+      .stage-title-group h2 {
+        margin: 0;
+        font-size: clamp(1.25rem, 3vw, 1.62rem);
+        line-height: 1.35;
+      }
+
+      .stage-title-group p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .count {
+        padding: 5px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        background: var(--surface-soft);
+        font-size: 0.84rem;
+        white-space: nowrap;
+      }
+
+      .regions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .region-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: rgba(4, 15, 27, 0.48);
+      }
+
+      .region-card.rest {
+        --region-color: var(--rest);
+      }
+
+      .region-card.west {
+        --region-color: var(--west);
+      }
+
+      .region-heading {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        padding: 15px 17px;
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(90deg, color-mix(in srgb, var(--region-color) 9%, transparent), transparent);
+      }
+
+      .region-letter {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid color-mix(in srgb, var(--region-color) 45%, transparent);
+        border-radius: 11px;
+        color: var(--region-color);
+        background: color-mix(in srgb, var(--region-color) 10%, transparent);
+        font-weight: 800;
+      }
+
+      .region-heading h3 {
+        margin: 0;
+        font-size: 1.04rem;
+      }
+
+      .grade-links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        padding: 14px;
+      }
+
+      .grade-link {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        min-width: 0;
+        min-height: 58px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 13px;
+        color: #e8f0f8;
+        background: rgba(255, 255, 255, 0.035);
+        text-decoration: none;
+        transition: 160ms ease;
+        transition-property: transform, border-color, background-color, box-shadow;
+      }
+
+      .grade-link:hover {
+        transform: translateY(-2px);
+        border-color: color-mix(in srgb, var(--region-color) 50%, transparent);
+        background: color-mix(in srgb, var(--region-color) 8%, transparent);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      }
+
+      .grade-link:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--region-color) 65%, transparent);
+        outline-offset: 2px;
+      }
+
+      .grade-number {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        place-items: center;
+        border-radius: 10px;
+        color: #07111f;
+        background: var(--region-color);
+        font-size: 1.02rem;
+        font-weight: 800;
+      }
+
+      .grade-text {
+        overflow: hidden;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .grade-link::after {
+        margin-right: auto;
+        color: var(--region-color);
+        content: "‹";
+        font-size: 1.45rem;
+        line-height: 1;
+      }
+
+      footer {
+        margin-top: 28px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.025);
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: #c8f4f1;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      footer p {
+        margin: 5px 0 0;
+        font-size: 0.82rem;
+      }
+
+      @media (max-width: 880px) {
+        .regions {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .page-shell {
+          width: min(100% - 20px, 1180px);
+          padding-top: 10px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          text-align: center;
+        }
+
+        .hero-logo {
+          width: 86px;
+          margin-inline: auto;
+        }
+
+        .hero-meta {
+          justify-content: center;
+        }
+
+        .guide {
+          text-align: right;
+        }
+
+        .stage-heading {
+          align-items: flex-start;
+        }
+
+        .count {
+          display: none;
+        }
+
+        .grade-links {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 390px) {
+        .grade-links {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .grade-link {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <header class="hero" aria-labelledby="page-title">
+        <img
+          class="hero-logo"
+          src="logo2.png"
+          alt="شعار ملتقى معلمي ومعلمات الرياضيات"
+        />
+        <div>
+          <p class="eyebrow">ملتقى معلمي ومعلمات الرياضيات ـ السعودية</p>
+          <h1 id="page-title">توزيعات مناهج الرياضيات</h1>
+          <p class="hero-copy">
+            توزيعات المرحلة الابتدائية والمتوسطة والثانوية ومادة الإحصاء،
+            مرتبة بحسب نطاق التقويم الدراسي.
+          </p>
+          <div class="hero-meta" aria-label="معلومات التوزيعات">
+            <span class="pill year">الفصل الدراسي الأول ـ 1448هـ</span>
+            <span class="pill">بقية المناطق والمنطقة الغربية</span>
+          </div>
+          <div class="guide">
+            <span class="guide-mark" aria-hidden="true">✓</span>
+            <span>اختر المرحلة والمنطقة والصف، ثم خصّص بيانات الترويسة واطبع التوزيع.</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="stage-section primary" aria-labelledby="primary-title">
+          <div class="stage-heading">
+            <span class="stage-symbol" aria-hidden="true">١–٦</span>
+            <div class="stage-title-group">
+              <h2 id="primary-title">المرحلة الابتدائية</h2>
+              <p>اختر توزيع المنطقة ثم الصف الدراسي.</p>
+            </div>
+            <span class="count">٦ صفوف</span>
+          </div>
+
+          <div class="regions">
+            <article class="region-card rest">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">ب</span>
+                <h3>بقية المناطق</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="1bm.html" target="_blank" rel="noopener" title="توزيع الصف الأول الابتدائي لبقية المناطق">
+                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
+                </a>
+                <a class="grade-link" href="2bm.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الابتدائي لبقية المناطق">
+                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
+                </a>
+                <a class="grade-link" href="3bm.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الابتدائي لبقية المناطق">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+                <a class="grade-link" href="4bm.html" target="_blank" rel="noopener" title="توزيع الصف الرابع الابتدائي لبقية المناطق">
+                  <span class="grade-number">٤</span><span class="grade-text">الصف الرابع</span>
+                </a>
+                <a class="grade-link" href="5bm.html" target="_blank" rel="noopener" title="توزيع الصف الخامس الابتدائي لبقية المناطق">
+                  <span class="grade-number">٥</span><span class="grade-text">الصف الخامس</span>
+                </a>
+                <a class="grade-link" href="6bm.html" target="_blank" rel="noopener" title="توزيع الصف السادس الابتدائي لبقية المناطق">
+                  <span class="grade-number">٦</span><span class="grade-text">الصف السادس</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="region-card west">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">غ</span>
+                <h3>المنطقة الغربية</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="1bg.html" target="_blank" rel="noopener" title="توزيع الصف الأول الابتدائي للمنطقة الغربية">
+                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
+                </a>
+                <a class="grade-link" href="2bg.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الابتدائي للمنطقة الغربية">
+                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
+                </a>
+                <a class="grade-link" href="3bg.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الابتدائي للمنطقة الغربية">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+                <a class="grade-link" href="4bg.html" target="_blank" rel="noopener" title="توزيع الصف الرابع الابتدائي للمنطقة الغربية">
+                  <span class="grade-number">٤</span><span class="grade-text">الصف الرابع</span>
+                </a>
+                <a class="grade-link" href="5bg.html" target="_blank" rel="noopener" title="توزيع الصف الخامس الابتدائي للمنطقة الغربية">
+                  <span class="grade-number">٥</span><span class="grade-text">الصف الخامس</span>
+                </a>
+                <a class="grade-link" href="6bg.html" target="_blank" rel="noopener" title="توزيع الصف السادس الابتدائي للمنطقة الغربية">
+                  <span class="grade-number">٦</span><span class="grade-text">الصف السادس</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="stage-section middle" aria-labelledby="middle-title">
+          <div class="stage-heading">
+            <span class="stage-symbol" aria-hidden="true">١–٣</span>
+            <div class="stage-title-group">
+              <h2 id="middle-title">المرحلة المتوسطة</h2>
+              <p>اختر توزيع المنطقة ثم الصف الدراسي.</p>
+            </div>
+            <span class="count">٣ صفوف</span>
+          </div>
+
+          <div class="regions">
+            <article class="region-card rest">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">ب</span>
+                <h3>بقية المناطق</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="1mm.html" target="_blank" rel="noopener" title="توزيع الصف الأول المتوسط لبقية المناطق">
+                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
+                </a>
+                <a class="grade-link" href="2mm.html" target="_blank" rel="noopener" title="توزيع الصف الثاني المتوسط لبقية المناطق">
+                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
+                </a>
+                <a class="grade-link" href="3mm.html" target="_blank" rel="noopener" title="توزيع الصف الثالث المتوسط لبقية المناطق">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="region-card west">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">غ</span>
+                <h3>المنطقة الغربية</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="1mg.html" target="_blank" rel="noopener" title="توزيع الصف الأول المتوسط للمنطقة الغربية">
+                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
+                </a>
+                <a class="grade-link" href="2mg.html" target="_blank" rel="noopener" title="توزيع الصف الثاني المتوسط للمنطقة الغربية">
+                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
+                </a>
+                <a class="grade-link" href="3mg.html" target="_blank" rel="noopener" title="توزيع الصف الثالث المتوسط للمنطقة الغربية">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="stage-section secondary" aria-labelledby="secondary-title">
+          <div class="stage-heading">
+            <span class="stage-symbol" aria-hidden="true">١–٣</span>
+            <div class="stage-title-group">
+              <h2 id="secondary-title">المرحلة الثانوية</h2>
+              <p>اختر توزيع المنطقة ثم الصف الدراسي.</p>
+            </div>
+            <span class="count">٣ صفوف</span>
+          </div>
+
+          <div class="regions">
+            <article class="region-card rest">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">ب</span>
+                <h3>بقية المناطق</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="1tm.html" target="_blank" rel="noopener" title="توزيع الصف الأول الثانوي لبقية المناطق">
+                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
+                </a>
+                <a class="grade-link" href="2tm.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الثانوي لبقية المناطق">
+                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
+                </a>
+                <a class="grade-link" href="3tm.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الثانوي لبقية المناطق">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="region-card west">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">غ</span>
+                <h3>المنطقة الغربية</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="1tg.html" target="_blank" rel="noopener" title="توزيع الصف الأول الثانوي للمنطقة الغربية">
+                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
+                </a>
+                <a class="grade-link" href="2tg.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الثانوي للمنطقة الغربية">
+                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
+                </a>
+                <a class="grade-link" href="3tg.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الثانوي للمنطقة الغربية">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="stage-section statistics" aria-labelledby="statistics-title">
+          <div class="stage-heading">
+            <span class="stage-symbol" aria-hidden="true">٪</span>
+            <div class="stage-title-group">
+              <h2 id="statistics-title">مادة الإحصاء ـ المرحلة الثانوية</h2>
+              <p>توزيع مادة الإحصاء للصف الثالث الثانوي.</p>
+            </div>
+            <span class="count">الصف الثالث</span>
+          </div>
+
+          <div class="regions">
+            <article class="region-card rest">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">ب</span>
+                <h3>بقية المناطق</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="3em.html" target="_blank" rel="noopener" title="توزيع الإحصاء للصف الثالث الثانوي لبقية المناطق">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="region-card west">
+              <div class="region-heading">
+                <span class="region-letter" aria-hidden="true">غ</span>
+                <h3>المنطقة الغربية</h3>
+              </div>
+              <div class="grade-links">
+                <a class="grade-link" href="3eg.html" target="_blank" rel="noopener" title="توزيع الإحصاء للصف الثالث الثانوي للمنطقة الغربية">
+                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <a href="https://t.me/Interact2030" target="_blank" rel="noopener noreferrer">
+          برمجة وتصميم ملتقى التعليم التفاعلي بملتقى معلمي ومعلمات الرياضيات ـ المملكة العربية السعودية
+        </a>
+        <p>نسأل الله أن ينفع بها المعلمين والمعلمات والطلاب والطالبات.</p>
+      </footer>
+    </div>
+  </body>
+</html>
