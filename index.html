@@ -804,6 +804,11 @@
         const gradeOption = document.createElement("div");
         const wordLink = document.createElement("a");
         const originalTitle = pdfLink.getAttribute("title") || "التوزيع";
+        const gradeText = pdfLink.querySelector(".grade-text");
+
+        if (gradeText) {
+          gradeText.textContent = gradeText.textContent.replace(/^الصف\s+/, "");
+        }
 
         gradeOption.className = "grade-option";
         pdfLink.parentNode.insertBefore(gradeOption, pdfLink);
