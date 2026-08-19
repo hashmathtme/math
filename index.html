@@ -11,815 +11,714 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
+
       gtag("config", "G-EM20Q3LCDF");
     </script>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#071a2d" />
     <meta
       name="description"
-      content="توزيعات مناهج الرياضيات لبقية المناطق والمنطقة الغربية ـ ملتقى معلمي ومعلمات الرياضيات"
+      content="توزيع مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات ـ السعودية"
     />
-    <title>توزيعات مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>توزيع مناهج الرياضيات | ملتقى معلمي ومعلمات الرياضيات</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="https://hashmathtme.github.io/math/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-
     <style>
       :root {
-        color-scheme: dark;
-        --page: #07111f;
-        --surface: rgba(12, 28, 48, 0.88);
-        --surface-soft: rgba(255, 255, 255, 0.045);
-        --line: rgba(255, 255, 255, 0.1);
-        --text: #f8fafc;
-        --muted: #a8b6c8;
-        --rest: #33d6c4;
-        --west: #f8bd62;
-        --primary: #30c9e8;
-        --middle: #a78bfa;
-        --secondary: #fb7185;
-        --statistics: #facc15;
-        --radius-lg: 26px;
-        --radius-md: 18px;
-        --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+        --bg: #0f172a; /* slate-900 */
+        --card: #111827; /* gray-900 */
+        --text: #e5e7eb; /* gray-200 */
+        --muted: #9ca3af; /* gray-400 */
+        --accent: #06b6d4; /* cyan-500 */
+        --accent-2: #a78bfa; /* violet-400 */
+        --accent-3: #f472b6; /* pink-400 */
+        --ring: rgba(255, 255, 255, 0.15);
+        --radius: 18px;
       }
-
       * {
         box-sizing: border-box;
       }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      html,
       body {
-        min-height: 100vh;
+        height: 100%;
+      }
+      body {
         margin: 0;
         font-family:
           "Tajawal",
           system-ui,
           -apple-system,
           "Segoe UI",
-          sans-serif;
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background:
+          radial-gradient(
+            1200px 600px at 110% -10%,
+            #1e293b 10%,
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 500px at -10% -20%,
+            #0b1220 10%,
+            transparent 60%
+          ),
+          var(--bg);
         color: var(--text);
         line-height: 1.7;
-        background:
-          radial-gradient(circle at 85% 0%, rgba(48, 201, 232, 0.15), transparent 30rem),
-          radial-gradient(circle at 5% 30%, rgba(167, 139, 250, 0.12), transparent 28rem),
-          linear-gradient(145deg, #07111f 0%, #091828 55%, #07111f 100%);
       }
-
-      a {
-        color: inherit;
-      }
-
-      .page-shell {
-        width: min(1180px, calc(100% - 32px));
+      .container {
+        max-width: 1200px;
+        padding: 32px 20px 60px;
         margin-inline: auto;
-        padding: 28px 0 56px;
       }
-
-      .hero {
-        position: relative;
-        isolation: isolate;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 28px;
-        align-items: center;
-        overflow: hidden;
-        padding: clamp(24px, 4vw, 44px);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-lg);
-        background: linear-gradient(135deg, rgba(18, 43, 68, 0.95), rgba(9, 25, 43, 0.9));
-        box-shadow: var(--shadow);
-      }
-
-      .hero::before,
-      .hero::after {
-        position: absolute;
-        z-index: -1;
-        border-radius: 50%;
-        content: "";
-        filter: blur(2px);
-      }
-
-      .hero::before {
-        top: -120px;
-        left: -80px;
-        width: 280px;
-        height: 280px;
-        background: rgba(48, 201, 232, 0.1);
-      }
-
-      .hero::after {
-        right: 40%;
-        bottom: -150px;
-        width: 240px;
-        height: 240px;
-        background: rgba(167, 139, 250, 0.08);
-      }
-
-      .hero-logo {
-        width: clamp(84px, 11vw, 128px);
-        height: auto;
-        filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
-      }
-
-      .eyebrow {
-        margin: 0 0 4px;
-        color: #8fe8f4;
-        font-size: 0.94rem;
-        font-weight: 700;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(1.75rem, 4vw, 3rem);
-        line-height: 1.25;
-        letter-spacing: -0.03em;
-      }
-
-      .hero-copy {
-        max-width: 760px;
-        margin: 10px 0 0;
-        color: var(--muted);
-        font-size: clamp(1rem, 2vw, 1.12rem);
-      }
-
-      .hero-meta {
+      header {
         display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 20px;
-      }
-
-      .pill {
-        display: inline-flex;
-        gap: 8px;
+        gap: 32px;
         align-items: center;
-        min-height: 36px;
-        padding: 6px 13px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        color: #dce8f4;
-        background: rgba(255, 255, 255, 0.055);
-        font-size: 0.9rem;
-        font-weight: 700;
+        text-align: center;
+        padding: 24px 32px;
+        border-radius: var(--radius);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0)
+        );
+        outline: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow:
+          0 0 0 1px var(--ring) inset,
+          0 25px 60px rgba(0, 0, 0, 0.35);
       }
-
-      .pill::before {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--rest);
-        content: "";
-        box-shadow: 0 0 14px var(--rest);
+      header .logo {
+        height: 90px;
+        width: auto;
+        flex-shrink: 0;
+        display: block;
+        filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
       }
-
-      .pill.year::before {
-        background: var(--west);
-        box-shadow: 0 0 14px var(--west);
-      }
-
-      .guide {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        margin: 22px 0 0;
-        padding: 14px 18px;
-        border: 1px solid rgba(51, 214, 196, 0.25);
-        border-radius: 16px;
-        color: #caeff0;
-        background: rgba(51, 214, 196, 0.075);
-      }
-
-      .guide-mark {
-        display: grid;
-        width: 32px;
-        height: 32px;
-        flex: 0 0 32px;
-        place-items: center;
-        border-radius: 10px;
-        color: #062621;
-        background: var(--rest);
-        font-size: 1.15rem;
-        font-weight: 800;
-      }
-
-      main {
-        display: grid;
-        gap: 22px;
-        margin-top: 28px;
-      }
-
-      .stage-section {
-        --stage-color: var(--primary);
-        position: relative;
-        overflow: hidden;
-        padding: clamp(20px, 3vw, 30px);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-lg);
-        background: var(--surface);
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
-      }
-
-      .stage-section::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 5px;
-        height: 100%;
-        background: var(--stage-color);
-        content: "";
-      }
-
-      .stage-section.middle {
-        --stage-color: var(--middle);
-      }
-
-      .stage-section.secondary {
-        --stage-color: var(--secondary);
-      }
-
-      .stage-section.statistics {
-        --stage-color: var(--statistics);
-      }
-
-      .stage-heading {
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .stage-symbol {
-        display: grid;
-        width: 48px;
-        height: 48px;
-        flex: 0 0 48px;
-        place-items: center;
-        border: 1px solid color-mix(in srgb, var(--stage-color) 45%, transparent);
-        border-radius: 15px;
-        color: var(--stage-color);
-        background: color-mix(in srgb, var(--stage-color) 10%, transparent);
-        font-size: 1rem;
-        font-weight: 800;
-      }
-
-      .stage-title-group {
+      header > div {
         flex: 1;
       }
-
-      .stage-title-group h2 {
-        margin: 0;
-        font-size: clamp(1.25rem, 3vw, 1.62rem);
-        line-height: 1.35;
+      h1 {
+        margin: 6px 0 0;
+        font-size: clamp(20px, 3.5vw, 28px);
+        font-weight: 800;
+        letter-spacing: 0.2px;
       }
-
-      .stage-title-group p {
-        margin: 3px 0 0;
+      .lead {
+        margin: 6px 0 2px;
+        font-size: clamp(14px, 2.6vw, 18px);
         color: var(--muted);
-        font-size: 0.94rem;
       }
-
-      .count {
-        padding: 5px 11px;
-        border: 1px solid var(--line);
+      .instruction {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 16px;
+        background: rgba(6, 182, 212, 0.1);
+        border: 1px solid rgba(6, 182, 212, 0.4);
+        border-radius: 8px;
+        color: var(--accent);
+        font-weight: 700;
+        animation: pulse 2s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .ribbon {
+        display: inline-block;
+        padding: 0.35rem 0.75rem;
         border-radius: 999px;
-        color: var(--muted);
-        background: var(--surface-soft);
-        font-size: 0.84rem;
-        white-space: nowrap;
-      }
-
-      .regions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-      }
-
-      .region-card {
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-md);
-        background: rgba(4, 15, 27, 0.48);
-      }
-
-      .region-card.rest {
-        --region-color: var(--rest);
-      }
-
-      .region-card.west {
-        --region-color: var(--west);
-      }
-
-      .region-heading {
-        display: flex;
-        gap: 11px;
-        align-items: center;
-        padding: 15px 17px;
-        border-bottom: 1px solid var(--line);
-        background: linear-gradient(90deg, color-mix(in srgb, var(--region-color) 9%, transparent), transparent);
-      }
-
-      .region-letter {
-        display: grid;
-        width: 34px;
-        height: 34px;
-        place-items: center;
-        border: 1px solid color-mix(in srgb, var(--region-color) 45%, transparent);
-        border-radius: 11px;
-        color: var(--region-color);
-        background: color-mix(in srgb, var(--region-color) 10%, transparent);
-        font-weight: 800;
-      }
-
-      .region-heading h3 {
-        margin: 0;
-        font-size: 1.04rem;
-      }
-
-      .grade-links {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-        padding: 14px;
-      }
-
-      .grade-option {
-        min-width: 0;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.09);
-        border-radius: 13px;
-        background: rgba(255, 255, 255, 0.035);
-        transition: 160ms ease;
-        transition-property: transform, border-color, box-shadow;
-      }
-
-      .grade-option:hover {
-        transform: translateY(-2px);
-        border-color: color-mix(in srgb, var(--region-color) 50%, transparent);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-      }
-
-      .grade-link {
-        display: flex;
-        gap: 9px;
-        align-items: center;
-        min-width: 0;
-        min-height: 58px;
-        padding: 10px;
-        color: #e8f0f8;
-        background: transparent;
-        text-decoration: none;
-        transition: 160ms ease;
-        transition-property: background-color;
-      }
-
-      .grade-link:hover {
-        background: color-mix(in srgb, var(--region-color) 8%, transparent);
-      }
-
-      .grade-link:focus-visible {
-        outline: 3px solid color-mix(in srgb, var(--region-color) 65%, transparent);
-        outline-offset: 2px;
-      }
-
-      .grade-number {
-        display: grid;
-        width: 34px;
-        height: 34px;
-        flex: 0 0 34px;
-        place-items: center;
-        border-radius: 10px;
-        color: #07111f;
-        background: var(--region-color);
-        font-size: 1.02rem;
-        font-weight: 800;
-      }
-
-      .grade-text {
-        overflow: hidden;
         font-size: 0.9rem;
-        font-weight: 700;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .grade-link::after {
-        margin-right: auto;
-        color: var(--region-color);
-        content: "PDF";
-        font-family: Arial, sans-serif;
-        font-size: 0.63rem;
-        font-weight: 800;
-        letter-spacing: 0.04em;
-      }
-
-      .word-link {
-        display: flex;
-        gap: 7px;
-        align-items: center;
-        justify-content: center;
-        min-height: 36px;
-        padding: 7px 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        color: #cfe0ff;
-        background: rgba(37, 99, 235, 0.11);
-        font-size: 0.75rem;
-        font-weight: 800;
-        text-decoration: none;
-        transition: 160ms ease;
-        transition-property: color, background-color;
-      }
-
-      .word-link:hover {
+        background: rgba(255, 255, 255, 0.08);
         color: #fff;
-        background: #2563eb;
+        outline: 1px solid rgba(255, 255, 255, 0.12);
+        margin-top: 6px;
       }
-
-      .word-link:focus-visible {
-        position: relative;
-        z-index: 1;
-        outline: 3px solid rgba(96, 165, 250, 0.75);
-        outline-offset: -3px;
-      }
-
-      .word-mark {
-        display: grid;
-        width: 20px;
-        height: 20px;
-        place-items: center;
-        border-radius: 5px;
-        color: #fff;
-        background: #2563eb;
-        font-family: Arial, sans-serif;
-        font-size: 0.72rem;
-        font-weight: 800;
-      }
-
-      .word-link:hover .word-mark {
-        color: #2563eb;
-        background: #fff;
-      }
-
-      footer {
-        margin-top: 28px;
-        padding: 22px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-md);
-        color: var(--muted);
-        background: rgba(255, 255, 255, 0.025);
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      footer a {
-        color: #c8f4f1;
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      footer p {
-        margin: 5px 0 0;
-        font-size: 0.82rem;
-      }
-
-      @media (max-width: 880px) {
-        .regions {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 620px) {
-        .page-shell {
-          width: min(100% - 20px, 1180px);
-          padding-top: 10px;
-        }
-
-        .hero {
-          grid-template-columns: 1fr;
-          gap: 16px;
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
           text-align: center;
         }
-
-        .hero-logo {
-          width: 86px;
-          margin-inline: auto;
-        }
-
-        .hero-meta {
-          justify-content: center;
-        }
-
-        .guide {
-          text-align: right;
-        }
-
-        .stage-heading {
-          align-items: flex-start;
-        }
-
-        .count {
-          display: none;
-        }
-
-        .grade-links {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      section {
+        margin-top: 36px;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin: 0 0 14px;
+      }
+      .tag {
+        font-size: 0.9rem;
+        color: var(--muted);
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        outline: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+      }
+      @media (max-width: 1100px) {
+        .grid {
+          grid-template-columns: repeat(4, 1fr);
         }
       }
-
-      @media (max-width: 390px) {
-        .grade-links {
+      @media (max-width: 780px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 430px) {
+        .grid {
           grid-template-columns: 1fr;
         }
       }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
+      a.card {
+        position: relative;
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--card);
+        outline: 1px solid rgba(255, 255, 255, 0.08);
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 0 0 1px var(--ring) inset;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          outline-color 0.18s ease;
+      }
+      a.card:focus-visible {
+        outline: 2px solid var(--accent);
+      }
+      a.card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+        outline-color: rgba(255, 255, 255, 0.16);
+      }
+      .tile {
+        height: 120px;
+        width: 100%;
+        background-size: 120px 120px;
+        background-position: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      /* ثلاث أنماط خلفية SVG فيها رموز + − × ÷ (مكرّرة) */
+      /* أخضر/فيروزي */
+      .pattern-a {
+        background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\ <rect width='120' height='120' fill='rgb(7, 16, 33)'/>\ <g stroke='rgb(0, 213, 255)' stroke-width='6' stroke-opacity='.55' stroke-linecap='round'>\  <line x1='20' y1='20' x2='20' y2='48'/>\  <line x1='6' y1='34' x2='34' y2='34'/>\  <line x1='60' y1='14' x2='92' y2='46'/>\  <line x1='92' y1='14' x2='60' y2='46'/>\  <line x1='20' y1='74' x2='34' y2='74'/>\  <line x1='20' y1='90' x2='34' y2='90'/>\  <circle cx='76' cy='76' r='14' fill='none'/>\  <line x1='62' y1='76' x2='90' y2='76'/>\ </g>\</svg>");
+      }
+      /* بنفسجي */
+      .pattern-b {
+        background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\ <rect width='120' height='120' fill='rgb(12, 16, 35)'/>\ <g stroke='rgb(167, 139, 250)' stroke-width='6' stroke-opacity='.55' stroke-linecap='round'>\  <line x1='20' y1='20' x2='20' y2='48'/>\  <line x1='6' y1='34' x2='34' y2='34'/>\  <line x1='60' y1='14' x2='92' y2='46'/>\  <line x1='92' y1='14' x2='60' y2='46'/>\  <line x1='20' y1='74' x2='34' y2='74'/>\  <line x1='20' y1='90' x2='34' y2='90'/>\  <circle cx='76' cy='76' r='14' fill='none'/>\  <line x1='62' y1='76' x2='90' y2='76'/>\ </g>\</svg>");
+      }
+      /* وردي */
+      .pattern-c {
+        background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\ <rect width='120' height='120' fill='rgb(17, 12, 28)'/>\ <g stroke='rgb(244, 114, 182)' stroke-width='6' stroke-opacity='.55' stroke-linecap='round'>\  <line x1='20' y1='20' x2='20' y2='48'/>\  <line x1='6' y1='34' x2='34' y2='34'/>\  <line x1='60' y1='14' x2='92' y2='46'/>\  <line x1='92' y1='14' x2='60' y2='46'/>\  <line x1='20' y1='74' x2='34' y2='74'/>\  <line x1='20' y1='90' x2='34' y2='90'/>\  <circle cx='76' cy='76' r='14' fill='none'/>\  <line x1='62' y1='76' x2='90' y2='76'/>\ </g>\</svg>");
+      }
+      /* ذهبي - للإحصاء */
+      .pattern-d {
+        background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?>\<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'>\ <rect width='120' height='120' fill='rgb(25, 20, 10)'/>\ <g stroke='rgb(250, 204, 21)' stroke-width='5' stroke-opacity='.55' stroke-linecap='round' fill='none'>\  <line x1='15' y1='95' x2='15' y2='65'/>\  <line x1='30' y1='95' x2='30' y2='45'/>\  <line x1='45' y1='95' x2='45' y2='75'/>\  <line x1='5' y1='100' x2='55' y2='100'/>\  <polyline points='65,50 80,30 95,45 110,25' stroke-linejoin='round'/>\  <circle cx='35' cy='25' r='14'/>\  <path d='M35 25 L35 11 M35 25 L47 32'/>\  <path d='M 70 90 Q 90 50 110 90'/>\ </g>\</svg>");
+      }
+      .label {
+        padding: 14px 14px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .label .stage {
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .label .grade {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      footer {
+        margin-top: 48px;
+        padding: 24px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      footer a {
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      footer .footer-link {
+        display: block;
+        color: var(--text);
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      footer .footer-link:hover {
+        color: var(--accent);
+      }
+      footer .footer-credits {
+        font-size: 0.8rem;
+        margin: 0;
+        opacity: 0.8;
+      }
+      footer .footer-credits a {
+        color: var(--accent);
+      }
+      footer .footer-credits a:hover {
+        text-decoration: underline;
+      }
+      .stage-prim .card {
+        outline-color: rgba(6, 182, 212, 0.5);
+        box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.2) inset;
+      }
+      .stage-mid .card {
+        outline-color: rgba(167, 139, 250, 0.5);
+        box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.2) inset;
+      }
+      .stage-high .card {
+        outline-color: rgba(244, 114, 182, 0.5);
+        box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.2) inset;
+      }
+      .stage-stats .card {
+        outline-color: rgba(250, 204, 21, 0.5);
+        box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.2) inset;
+      }
+      .split-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 36px;
+      }
+      .split-wrapper section {
+        margin-top: 0;
+      }
+      .split-wrapper .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 900px) {
+        .split-wrapper {
+          grid-template-columns: 1fr;
+          gap: 0;
         }
-
-        .grade-link {
-          transition: none;
+        .split-wrapper section {
+          margin-top: 36px;
+        }
+        .split-wrapper .grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 780px) {
+        .split-wrapper .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 430px) {
+        .split-wrapper .grid {
+          grid-template-columns: 1fr;
         }
       }
     </style>
   </head>
-
   <body>
-    <div class="page-shell">
-      <header class="hero" aria-labelledby="page-title">
+    <div class="container">
+      <header aria-label="ترويسة الصفحة">
         <img
-          class="hero-logo"
-          src="logo2.png"
+          class="logo"
+          src="https://hashmathtme.github.io/math/logo2.png"
           alt="شعار ملتقى معلمي ومعلمات الرياضيات"
         />
         <div>
-          <p class="eyebrow">ملتقى معلمي ومعلمات الرياضيات ـ السعودية</p>
-          <h1 id="page-title">توزيعات مناهج الرياضيات</h1>
-          <p class="hero-copy">
-            توزيعات المرحلة الابتدائية والمتوسطة والثانوية ومادة الإحصاء،
-            مرتبة بحسب نطاق التقويم الدراسي.
+          <h1>يسرُّ ملتقى معلمي ومعلمات الرياضيات أن يقدّم لكم</h1>
+          <p class="lead">
+            توزيع مناهج الرياضيات للمرحلة الابتدائية والمتوسطة والثانوية <br />
+            <span class="instruction"
+              >إرشادات: قم باختيار صفك ثم بإعدادات الترويسة ببياناتك الخاصة ثم
+              اطبع</span
+            >
           </p>
-          <div class="hero-meta" aria-label="معلومات التوزيعات">
-            <span class="pill year">الفصل الدراسي الأول ـ 1448هـ</span>
-            <span class="pill">بقية المناطق والمنطقة الغربية</span>
-          </div>
-          <div class="guide">
-            <span class="guide-mark" aria-hidden="true">✓</span>
-            <span>خصّص بيانات الترويسة واطبع PDF، أو نزّل نسخة Word الجاهزة مباشرة.</span>
-          </div>
+          <span class="ribbon">الفصل الدراسي الأول — 1448 هـ</span>
         </div>
       </header>
 
-      <main>
-        <section class="stage-section primary" aria-labelledby="primary-title">
-          <div class="stage-heading">
-            <span class="stage-symbol" aria-hidden="true">١–٦</span>
-            <div class="stage-title-group">
-              <h2 id="primary-title">المرحلة الابتدائية</h2>
-              <p>اختر توزيع المنطقة ثم الصف الدراسي.</p>
+      <section aria-labelledby="el-title" class="stage-prim">
+        <div class="section-title" id="el-title">
+          <span>المرحلة الابتدائية</span>
+          <span class="tag">6 صفوف</span>
+        </div>
+        <div class="grid">
+          <a
+            class="card"
+            href="1b2"
+            target="_blank"
+            rel="noopener"
+            title="توزيع منهج الصف الأول الابتدائي — الفصل الأول 1448هـ"
+          >
+            <div
+              class="tile pattern-a"
+              role="img"
+              aria-label="خلفية برموز رياضية"
+            ></div>
+            <div class="label">
+              <span class="stage">الابتدائية</span
+              ><span class="grade">الصف الأول</span>
             </div>
-            <span class="count">٦ صفوف</span>
+          </a>
+          <a
+            class="card"
+            href="2b2"
+            target="_blank"
+            rel="noopener"
+            title="توزيع منهج الصف الثاني الابتدائي — الفصل الأول 1448هـ"
+          >
+            <div
+              class="tile pattern-a"
+              role="img"
+              aria-label="خلفية برموز رياضية"
+            ></div>
+            <div class="label">
+              <span class="stage">الابتدائية</span
+              ><span class="grade">الصف الثاني</span>
+            </div>
+          </a>
+          <a
+            class="card"
+            href="3b2"
+            target="_blank"
+            rel="noopener"
+            title="توزيع منهج الصف الثالث الابتدائي — الفصل الأول 1448هـ"
+          >
+            <div
+              class="tile pattern-a"
+              role="img"
+              aria-label="خلفية برموز رياضية"
+            ></div>
+            <div class="label">
+              <span class="stage">الابتدائية</span
+              ><span class="grade">الصف الثالث</span>
+            </div>
+          </a>
+          <a
+            class="card"
+            href="4b2"
+            target="_blank"
+            rel="noopener"
+            title="توزيع منهج الصف الرابع الابتدائي — الفصل الأول 1448هـ"
+          >
+            <div
+              class="tile pattern-a"
+              role="img"
+              aria-label="خلفية برموز رياضية"
+            ></div>
+            <div class="label">
+              <span class="stage">الابتدائية</span
+              ><span class="grade">الصف الرابع</span>
+            </div>
+          </a>
+          <a
+            class="card"
+            href="5b2.html"
+            target="_blank"
+            rel="noopener"
+            title="توزيع منهج الصف الخامس الابتدائي — الفصل الأول 1448هـ"
+          >
+            <div
+              class="tile pattern-a"
+              role="img"
+              aria-label="خلفية برموز رياضية"
+            ></div>
+            <div class="label">
+              <span class="stage">الابتدائية</span
+              ><span class="grade">الصف الخامس</span>
+            </div>
+          </a>
+          <a
+            class="card"
+            href="6b2"
+            target="_blank"
+            rel="noopener"
+            title="توزيع منهج الصف السادس الابتدائي — الفصل الأول 1448هـ"
+          >
+            <div
+              class="tile pattern-a"
+              role="img"
+              aria-label="خلفية برموز رياضية"
+            ></div>
+            <div class="label">
+              <span class="stage">الابتدائية</span
+              ><span class="grade">الصف السادس</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div class="split-wrapper">
+        <section aria-labelledby="mid-title" class="stage-mid">
+          <div class="section-title" id="mid-title">
+            <span>المرحلة المتوسطة</span>
+            <span class="tag">3 صفوف</span>
           </div>
-
-          <div class="regions">
-            <article class="region-card rest">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">ب</span>
-                <h3>بقية المناطق</h3>
+          <div class="grid">
+            <a
+              class="card"
+              href="1m2.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الأول المتوسط — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-b"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">المتوسطة</span
+                ><span class="grade">الصف الأول</span>
               </div>
-              <div class="grade-links">
-                <a class="grade-link" href="1bm.html" target="_blank" rel="noopener" title="توزيع الصف الأول الابتدائي لبقية المناطق">
-                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
-                </a>
-                <a class="grade-link" href="2bm.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الابتدائي لبقية المناطق">
-                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
-                </a>
-                <a class="grade-link" href="3bm.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الابتدائي لبقية المناطق">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
-                <a class="grade-link" href="4bm.html" target="_blank" rel="noopener" title="توزيع الصف الرابع الابتدائي لبقية المناطق">
-                  <span class="grade-number">٤</span><span class="grade-text">الصف الرابع</span>
-                </a>
-                <a class="grade-link" href="5bm.html" target="_blank" rel="noopener" title="توزيع الصف الخامس الابتدائي لبقية المناطق">
-                  <span class="grade-number">٥</span><span class="grade-text">الصف الخامس</span>
-                </a>
-                <a class="grade-link" href="6bm.html" target="_blank" rel="noopener" title="توزيع الصف السادس الابتدائي لبقية المناطق">
-                  <span class="grade-number">٦</span><span class="grade-text">الصف السادس</span>
-                </a>
+            </a>
+            <a
+              class="card"
+              href="2m2"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثاني المتوسط — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-b"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">المتوسطة</span
+                ><span class="grade">الصف الثاني</span>
               </div>
-            </article>
-
-            <article class="region-card west">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">غ</span>
-                <h3>المنطقة الغربية</h3>
+            </a>
+            <a
+              class="card"
+              href="3m2"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثالث المتوسط — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-b"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">المتوسطة</span
+                ><span class="grade">الصف الثالث</span>
               </div>
-              <div class="grade-links">
-                <a class="grade-link" href="1bg.html" target="_blank" rel="noopener" title="توزيع الصف الأول الابتدائي للمنطقة الغربية">
-                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
-                </a>
-                <a class="grade-link" href="2bg.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الابتدائي للمنطقة الغربية">
-                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
-                </a>
-                <a class="grade-link" href="3bg.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الابتدائي للمنطقة الغربية">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
-                <a class="grade-link" href="4bg.html" target="_blank" rel="noopener" title="توزيع الصف الرابع الابتدائي للمنطقة الغربية">
-                  <span class="grade-number">٤</span><span class="grade-text">الصف الرابع</span>
-                </a>
-                <a class="grade-link" href="5bg.html" target="_blank" rel="noopener" title="توزيع الصف الخامس الابتدائي للمنطقة الغربية">
-                  <span class="grade-number">٥</span><span class="grade-text">الصف الخامس</span>
-                </a>
-                <a class="grade-link" href="6bg.html" target="_blank" rel="noopener" title="توزيع الصف السادس الابتدائي للمنطقة الغربية">
-                  <span class="grade-number">٦</span><span class="grade-text">الصف السادس</span>
-                </a>
-              </div>
-            </article>
+            </a>
           </div>
         </section>
 
-        <section class="stage-section middle" aria-labelledby="middle-title">
-          <div class="stage-heading">
-            <span class="stage-symbol" aria-hidden="true">١–٣</span>
-            <div class="stage-title-group">
-              <h2 id="middle-title">المرحلة المتوسطة</h2>
-              <p>اختر توزيع المنطقة ثم الصف الدراسي.</p>
-            </div>
-            <span class="count">٣ صفوف</span>
+        <section aria-labelledby="hs-title" class="stage-high">
+          <div class="section-title" id="hs-title">
+            <span> بقية المناطق : المرحلة الثانوية</span>
+            <span class="tag">3 صفوف</span>
           </div>
-
-          <div class="regions">
-            <article class="region-card rest">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">ب</span>
-                <h3>بقية المناطق</h3>
+          <div class="grid">
+            <a
+              class="card"
+              href="1t2m.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الأول الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الأول</span>
               </div>
-              <div class="grade-links">
-                <a class="grade-link" href="1mm.html" target="_blank" rel="noopener" title="توزيع الصف الأول المتوسط لبقية المناطق">
-                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
-                </a>
-                <a class="grade-link" href="2mm.html" target="_blank" rel="noopener" title="توزيع الصف الثاني المتوسط لبقية المناطق">
-                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
-                </a>
-                <a class="grade-link" href="3mm.html" target="_blank" rel="noopener" title="توزيع الصف الثالث المتوسط لبقية المناطق">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
+            </a>
+            <a
+              class="card"
+              href="2t2m.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثاني الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الثاني</span>
               </div>
-            </article>
-
-            <article class="region-card west">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">غ</span>
-                <h3>المنطقة الغربية</h3>
+            </a>
+            <a
+              class="card"
+              href="3t2m.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثالث الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الثالث</span>
               </div>
-              <div class="grade-links">
-                <a class="grade-link" href="1mg.html" target="_blank" rel="noopener" title="توزيع الصف الأول المتوسط للمنطقة الغربية">
-                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
-                </a>
-                <a class="grade-link" href="2mg.html" target="_blank" rel="noopener" title="توزيع الصف الثاني المتوسط للمنطقة الغربية">
-                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
-                </a>
-                <a class="grade-link" href="3mg.html" target="_blank" rel="noopener" title="توزيع الصف الثالث المتوسط للمنطقة الغربية">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="stage-section secondary" aria-labelledby="secondary-title">
-          <div class="stage-heading">
-            <span class="stage-symbol" aria-hidden="true">١–٣</span>
-            <div class="stage-title-group">
-              <h2 id="secondary-title">المرحلة الثانوية</h2>
-              <p>اختر توزيع المنطقة ثم الصف الدراسي.</p>
-            </div>
-            <span class="count">٣ صفوف</span>
-          </div>
-
-          <div class="regions">
-            <article class="region-card rest">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">ب</span>
-                <h3>بقية المناطق</h3>
-              </div>
-              <div class="grade-links">
-                <a class="grade-link" href="1tm.html" target="_blank" rel="noopener" title="توزيع الصف الأول الثانوي لبقية المناطق">
-                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
-                </a>
-                <a class="grade-link" href="2tm.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الثانوي لبقية المناطق">
-                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
-                </a>
-                <a class="grade-link" href="3tm.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الثانوي لبقية المناطق">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
-              </div>
-            </article>
-
-            <article class="region-card west">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">غ</span>
-                <h3>المنطقة الغربية</h3>
-              </div>
-              <div class="grade-links">
-                <a class="grade-link" href="1tg.html" target="_blank" rel="noopener" title="توزيع الصف الأول الثانوي للمنطقة الغربية">
-                  <span class="grade-number">١</span><span class="grade-text">الصف الأول</span>
-                </a>
-                <a class="grade-link" href="2tg.html" target="_blank" rel="noopener" title="توزيع الصف الثاني الثانوي للمنطقة الغربية">
-                  <span class="grade-number">٢</span><span class="grade-text">الصف الثاني</span>
-                </a>
-                <a class="grade-link" href="3tg.html" target="_blank" rel="noopener" title="توزيع الصف الثالث الثانوي للمنطقة الغربية">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
-              </div>
-            </article>
+            </a>
           </div>
         </section>
-
-        <section class="stage-section statistics" aria-labelledby="statistics-title">
-          <div class="stage-heading">
-            <span class="stage-symbol" aria-hidden="true">٪</span>
-            <div class="stage-title-group">
-              <h2 id="statistics-title">مادة الإحصاء ـ المرحلة الثانوية</h2>
-              <p>توزيع مادة الإحصاء للصف الثالث الثانوي.</p>
-            </div>
-            <span class="count">الصف الثالث</span>
+      </div>
+      <div class="split-wrapper">
+        <section aria-labelledby="hs-title" class="stage-high">
+          <div class="section-title" id="hs-title">
+            <span> المنطقة الغربية : المرحلة الثانوية</span>
+            <span class="tag">3 صفوف</span>
           </div>
-
-          <div class="regions">
-            <article class="region-card rest">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">ب</span>
-                <h3>بقية المناطق</h3>
+          <div class="grid">
+            <a
+              class="card"
+              href="1t2g.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الأول الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الأول</span>
               </div>
-              <div class="grade-links">
-                <a class="grade-link" href="3em.html" target="_blank" rel="noopener" title="توزيع الإحصاء للصف الثالث الثانوي لبقية المناطق">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
+            </a>
+            <a
+              class="card"
+              href="2t2g.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثاني الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الثاني</span>
               </div>
-            </article>
-
-            <article class="region-card west">
-              <div class="region-heading">
-                <span class="region-letter" aria-hidden="true">غ</span>
-                <h3>المنطقة الغربية</h3>
+            </a>
+            <a
+              class="card"
+              href="3t2g.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثالث الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-c"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الثالث</span>
               </div>
-              <div class="grade-links">
-                <a class="grade-link" href="3eg.html" target="_blank" rel="noopener" title="توزيع الإحصاء للصف الثالث الثانوي للمنطقة الغربية">
-                  <span class="grade-number">٣</span><span class="grade-text">الصف الثالث</span>
-                </a>
-              </div>
-            </article>
+            </a>
           </div>
         </section>
-      </main>
+        <section aria-labelledby="hs-title" class="stage-stats">
+          <div class="section-title" id="hs-title">
+            <span> مادة الأحصاء: المرحلة الثانوية</span>
+            <span class="tag">3 صفوف</span>
+          </div>
+          <div class="grid">
+            <a
+              class="card"
+              href="3t2e.html"
+              target="_blank"
+              rel="noopener"
+              title="توزيع منهج الصف الثالث الثانوي — الفصل الأول 1448هـ"
+            >
+              <div
+                class="tile pattern-d"
+                role="img"
+                aria-label="خلفية برموز رياضية"
+              ></div>
+              <div class="label">
+                <span class="stage">الثانوية</span
+                ><span class="grade">الصف الثالث</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
 
       <footer>
-        <a href="https://t.me/Interact2030" target="_blank" rel="noopener noreferrer">
-          برمجة وتصميم ملتقى التعليم التفاعلي بملتقى معلمي ومعلمات الرياضيات ـ المملكة العربية السعودية
+        <a
+          href="https://t.me/Interact2030"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-link"
+        >
+          برمجة و تصميم/ ملتقى التعليم التفاعلي بملتقى معلمي ومعلمات الرياضيات ـ
+          المملكة العربية السعودية.
         </a>
-        <p>نسأل الله أن ينفع بها المعلمين والمعلمات والطلاب والطالبات.</p>
+        <p class="footer-credits">
+          تمت البرمجة باستخدام
+          <a
+            href="https://developers.google.com/studio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Studio
+          </a>
+          و
+          <a
+            href="https://gemini.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Gemini
+          </a>
+          بواسطة
+          <a
+            href="https://t.me/Interact2030"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-weight: 600"
+          >
+            ملتقى التعليم التفاعلي
+          </a>
+          .
+        </p>
       </footer>
     </div>
-
-    <script>
-      const WORD_EXTENSION = "doc";
-
-      document.querySelectorAll(".grade-link[href$='.html']").forEach(function (pdfLink) {
-        const htmlFile = pdfLink.getAttribute("href");
-        const wordFile = htmlFile.replace(/\.html$/i, "d." + WORD_EXTENSION);
-        const gradeOption = document.createElement("div");
-        const wordLink = document.createElement("a");
-        const originalTitle = pdfLink.getAttribute("title") || "التوزيع";
-
-        gradeOption.className = "grade-option";
-        pdfLink.parentNode.insertBefore(gradeOption, pdfLink);
-        gradeOption.appendChild(pdfLink);
-
-        pdfLink.setAttribute("title", originalTitle + " ـ تخصيص وطباعة PDF");
-        pdfLink.setAttribute("aria-label", originalTitle + " ـ تخصيص وطباعة PDF");
-
-        wordLink.className = "word-link";
-        wordLink.href = wordFile;
-        wordLink.download = wordFile;
-        wordLink.setAttribute("title", "تنزيل نسخة Word الجاهزة ـ " + originalTitle);
-        wordLink.setAttribute("aria-label", "تنزيل نسخة Word الجاهزة ـ " + originalTitle);
-        wordLink.innerHTML = '<span class="word-mark" aria-hidden="true">W</span><span>تنزيل Word</span>';
-        gradeOption.appendChild(wordLink);
-      });
-    </script>
   </body>
 </html>
