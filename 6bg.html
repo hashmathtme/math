@@ -42,7 +42,7 @@
         <div>المادة: <span data-field="subject">الرياضيات</span></div>
         <div>الصف: <span data-field="grade">السادس الابتدائي</span></div>
       </div>
-    </header><div id="table-view" class="">
+    </header><div id="table-view" class="view-hidden">
     <table class="planner-table">
       <thead><tr><th>الأسبوع</th><th>م</th><th>اليوم</th><th>التاريخ</th><th>الموضوعات الدراسية</th></tr></thead>
       <tbody><tr class=" ">
@@ -874,7 +874,7 @@
             <td style="vertical-align:middle;text-align:center;"><p style="margin:0;padding:0;font-size:8pt;line-height:1.2;">٠٦‏/٠٨‏/١٤٤٨هـ</p><p style="margin:0;padding:0;font-size:8pt;line-height:1.2;">١٤‏/٠١‏/٢٠٢٧م</p></td>
             <td class="topic"><span style="">اختبارات الفصل الدراسي الأول</span></td>
           </tr></tbody>
-    </table></div><div id="cards-view" class="view-hidden"><section class="cards">
+    </table></div><div id="cards-view" class=""><section class="cards">
         <article class="week-card comfortable" data-topic-count="5">
           <div class="week-card-head">
             <strong>الأسبوع ١</strong>
@@ -1018,7 +1018,7 @@
     <footer class="report-footer">
       <span>اسم المعلم/ـة: <span data-field="teacherName"></span></span>
       <span>التوقيع: ........................</span>
-    </footer><div class="credit"><div>تمت برمجته وتطويره بـ <a href="https://chatgpt.com/" target="_blank" rel="noreferrer"><strong>chatgpt</strong></a></div><div class="notebook-credit"><a href="https://t.me/Insan_Notebook" target="_blank" rel="noreferrer"><strong>لـ كشكول إنسان</strong></a></div></div></main><div class="pdf-pages pdf-card-pages ">
+    </footer><div class="credit"><div>تمت برمجته وتطويره بـ <a href="https://chatgpt.com/" target="_blank" rel="noreferrer"><strong>chatgpt</strong></a></div><div class="notebook-credit"><a href="https://t.me/Insan_Notebook" target="_blank" rel="noreferrer"><strong>لـ كشكول إنسان</strong></a></div></div></main><div class="pdf-pages pdf-card-pages selected-print">
     <section class="pdf-page">
       
     <header class="report-header">
@@ -1200,7 +1200,7 @@
       <span>اسم المعلم/ـة: <span data-field="teacherName"></span></span>
       <span>التوقيع: ........................</span>
     </footer>
-    </section></div><div class="pdf-pages pdf-table-pages selected-print">
+    </section></div><div class="pdf-pages pdf-table-pages ">
     <section class="pdf-page pdf-table-page">
       
     <header class="report-header">
@@ -1381,7 +1381,7 @@
       <span>التوقيع: ........................</span>
     </footer>
     </section></div><script>
-    let currentView="table";
+    let currentView="cards";
     const useEasternDigits=true;
     function localizeDigits(value){return useEasternDigits?String(value).replace(/[0-9]/g,function(digit){return '٠١٢٣٤٥٦٧٨٩'[Number(digit)]}):String(value)}
     function updateField(field,input){const value=localizeDigits(input.value);if(input.value!==value){const position=input.selectionStart;input.value=value;if(position!==null)input.setSelectionRange(position,position)}document.querySelectorAll('[data-field="'+field+'"]').forEach(function(node){node.textContent=value})}
